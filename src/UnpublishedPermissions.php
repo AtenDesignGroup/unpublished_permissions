@@ -5,7 +5,6 @@ namespace Drupal\unpublished_permissions;
 use Drupal\node\Entity\NodeType;
 use Drupal\node\NodePermissions;
 
-
 /**
  * Provides dynamic permissions for nodes of different types.
  */
