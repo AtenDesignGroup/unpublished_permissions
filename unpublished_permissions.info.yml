@@ -3,4 +3,4 @@ type: module
 description: Allow non-admins to delete or to edit unpublished content
 package: Permissions
 core: 8.x
-
+core_version_requirement: ^8 || ^9
