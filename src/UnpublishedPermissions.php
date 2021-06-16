@@ -19,21 +19,23 @@ class UnpublishedPermissions extends NodePermissions {
    * @return array
    *   An associative array of permission names and descriptions.
    */
-  protected function buildUnpublishedPermissions(NodeType $type) {
+  protected function buildPermissions(NodeType $type) {
+    $permissions = parent::buildPermissions($type);
+
     $type_id = $type->id();
     $type_params = ['%type_name' => $type->label()];
 
-    return [
-      "view any $type_id unpublished content" => [
-        'title' => $this->t('%type_name: View any unpublished content', $type_params),
-      ],
-      "edit any $type_id unpublished content" => [
-        'title' => $this->t('%type_name: Edit any unpublished content', $type_params),
-      ],
-      "delete any $type_id unpublished content" => [
-        'title' => $this->t('%type_name: Delete any unpublished content', $type_params),
-      ],
+    $permissions["view any $type_id unpublished content"] = [
+      'title' => $this->t('%type_name: View any unpublished content', $type_params),
     ];
+    $permissions["edit any $type_id unpublished content"] = [
+      'title' => $this->t('%type_name: Edit any unpublished content', $type_params),
+    ];
+    $permissions["delete any $type_id unpublished content"] = [
+      'title' => $this->t('%type_name: Delete any unpublished content', $type_params),
+    ];
+
+    return $permissions;
   }
 
 }
