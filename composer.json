@@ -1,0 +1,38 @@
+{
+  "name": "aten/unpublished_permissions",
+  "type": "drupal-module",
+  "description": "Drupal module to provide additional permissions for managing unpublished content.",
+  "homepage": "https://github.com/AtenDesignGroup/unpublished_permissions",
+  "license": "GPL-2.0-or-later",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/AtenDesignGroup/unpublished_permissions"
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.0.24",
+    "drupal/core-composer-scaffold": "^10.1.5",
+    "drupal/core-project-message": "^10.1.5",
+    "drupal/core-recommended": "^10.1.5",
+    "aten/unpublished_permissions": "dev-master"
+  },
+  "extra": {
+    "installer-name": "unpublished_permissions"
+  },
+  "scripts": {
+    "post-package-install": [
+      "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+    ],
+    "post-package-update": [
+      "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+    ]
+  },
+  "autoload": {
+    "classmap": [
+      "scripts/composer/ScriptHandler.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
