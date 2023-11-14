@@ -12,9 +12,8 @@
   ],
   "require": {
     "composer/installers": "^1.0.24",
-    "drupal/core-composer-scaffold": "^10.1.5",
-    "drupal/core-project-message": "^10.1.5",
-    "drupal/core-recommended": "^10.1.5"
+    "drupal/core-composer-scaffold": "^8.0 || ^9.0 || ^10.0",
+    "drupal/core-recommended": "^8.0 || ^9.0 || ^10.0"
   },
   "extra": {
     "installer-name": "unpublished_permissions"
