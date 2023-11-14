@@ -26,11 +26,7 @@
       "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
     ]
   },
-  "autoload": {
-    "classmap": [
-      "scripts/composer/ScriptHandler.php"
-    ]
-  },
+  "autoload": {  },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
